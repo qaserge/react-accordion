@@ -1,4 +1,10 @@
-export default function AccordionItem({ num, title, text, curOpen, onOpen }) {
+export default function AccordionItem({
+  num,
+  title,
+  curOpen,
+  onOpen,
+  children,
+}) {
   const isOpen = num === curOpen;
 
   function handleToggle() {
@@ -11,7 +17,7 @@ export default function AccordionItem({ num, title, text, curOpen, onOpen }) {
       <p className="text">{title}</p>
       <p className="icon">{isOpen ? "-" : "+"}</p>
 
-      {isOpen && <div className="content-box">{text}</div>}
+      {isOpen && <div className="content-box">{children}</div>}
     </div>
   );
 }

@@ -13,8 +13,9 @@ export default function Accordion({ data }) {
           key={index}
           num={index + 1}
           title={item.title}
-          text={item.text}
-        />
+        >
+          {item.text}
+        </AccordionItem>
       ))}
     </div>
   );
